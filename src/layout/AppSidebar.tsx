@@ -3,13 +3,11 @@ import { Link, useLocation } from "react-router";
 
 import {
   BoxCubeIcon,
-
   ChevronDownIcon,
   GridIcon,
   HorizontaLDots,
   ListIcon,
   PageIcon,
-
   PlugInIcon,
   TableIcon,
   UserCircleIcon,
@@ -31,7 +29,6 @@ const navItems: NavItem[] = [
     subItems: [{ name: "Ventas", path: "/ventas", pro: false }],
   },
 
-
   {
     name: "Forms",
     icon: <ListIcon />,
@@ -48,8 +45,7 @@ const navItems: NavItem[] = [
     subItems: [
       { name: "Blank Page", path: "/blank", pro: false },
       { name: "404 Error", path: "/error-404", pro: false },
-      {name: "Calendar",
-        path: "/calendar",},
+      { name: "Calendar", path: "/calendar" },
     ],
   },
 ];
@@ -59,6 +55,7 @@ const othersItems: NavItem[] = [
     icon: <UserCircleIcon />,
     name: "Usuarios",
     subItems: [
+      { name: "Información", path: "/basic-tables", pro: false },
       { name: "Line Chart", path: "/line-chart", pro: false },
       { name: "Bar Chart", path: "/bar-chart", pro: false },
       {
@@ -85,7 +82,7 @@ const othersItems: NavItem[] = [
     subItems: [
       { name: "Sign In", path: "/signin", pro: false },
       { name: "Sign Up", path: "/signup", pro: false },
-      {name: "Login ", path: "/login", pro: false},
+      { name: "Login ", path: "/login", pro: false },
     ],
   },
 ];
@@ -301,7 +298,7 @@ const AppSidebar: React.FC = () => {
           !isExpanded && !isHovered ? "lg:justify-center" : "justify-start"
         }`}
       >
-        <Link to="/">
+        <Link to="/home">
           {isExpanded || isHovered || isMobileOpen ? (
             <>
               <img

@@ -174,6 +174,7 @@ import { useNavigate } from "react-router-dom";
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="input-style"
+                  autoFocus
                 />
                 <label className="input-label">Correo Electrónico</label>
               </div>
